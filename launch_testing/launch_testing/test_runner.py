@@ -181,7 +181,7 @@ class _RunnerWorker():
         # Waits for the DUT processes to start (signaled by the _processes_launched
         # event) and then runs the tests
 
-        if not self._processes_launched.wait(timeout=15):
+        if not self._processes_launched.wait(timeout=60):
             # Timed out waiting for the processes to start
             print('Timed out waiting for processes to start up')
             self._launch_service.shutdown()
